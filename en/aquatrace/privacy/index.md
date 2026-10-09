@@ -8,7 +8,7 @@ version: 1.0
 updated: 2026-10-09
 ---
 
-This policy explains how AquaTrace (the "App"), developed by Blessing Works, handles your data.
+This policy explains how AquaTrace (the "App") handles your data.
 
 > - **The App doesn't collect your data**: no accounts, no ads, no analytics or tracking tools. What you record in the App is never sent to us.
 > - **Your data stays in places you own**: this device, your iCloud, and Apple Health if you allow it. The developer can't see any of it.
