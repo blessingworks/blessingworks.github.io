@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <clipPath id="dropClip">
+      <path d="M512 140 C512 140 180 400 180 620 C180 780 330 890 512 890 C694 890 844 780 844 620 C844 400 512 140 512 140Z"/>
+    </clipPath>
+  </defs>
+  <rect width="1024" height="1024" fill="#FAF3EB"/>
+  <path d="M512 140 C512 140 180 400 180 620 C180 780 330 890 512 890 C694 890 844 780 844 620 C844 400 512 140 512 140Z"
+    fill="#5BA3C9"/>
+  <path d="M 300 555 C 390 500 634 500 724 555"
+    fill="none" stroke="#FFFFFF" stroke-width="36" stroke-linecap="round"
+    clip-path="url(#dropClip)"/>
+  <path d="M 240 680 C 345 615 679 615 784 680"
+    fill="none" stroke="#B8D8EA" stroke-width="36" stroke-linecap="round"
+    clip-path="url(#dropClip)"/>
+</svg>

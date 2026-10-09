@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+{%- comment -%}
+  Liquid 的 assign 不能寫比較式（assign x = a == b 會直接得到 a），
+  所以「是不是英文頁」要用 if 判斷後再指定 true / false
+{%- endcomment -%}
+{%- if page.lang == "en" -%}
+  {%- assign is_en = true -%}
+  {%- assign lang = "en" -%}
+  {%- assign prefix = "/en" -%}
+  {%- assign zh_url = page.alt_url -%}
+  {%- assign en_url = page.url -%}
+{%- else -%}
+  {%- assign is_en = false -%}
+  {%- assign lang = "zh-Hant" -%}
+  {%- assign prefix = "" -%}
+  {%- assign zh_url = page.url -%}
+  {%- assign en_url = page.alt_url -%}
+{%- endif -%}
+{%- comment -%} 這一頁屬於哪個 App（網址含 /App id/），用來畫分頁標籤 {%- endcomment -%}
+{%- assign current_app = nil -%}
+{%- for app in site.data.apps -%}
+  {%- capture app_segment %}/{{ app.id }}/{% endcapture -%}
+  {%- if page.url contains app_segment -%}{%- assign current_app = app -%}{%- endif -%}
+{%- endfor -%}
+<html lang="{{ page.lang | default: 'zh-Hant' }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>{% if page.title %}{{ page.title }}{% if page.app %} – {{ page.app }}{% endif %} – {% endif %}{{ site.title }}</title>
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+{%- if page.icon %}
+<link rel="icon" href="{{ page.icon | relative_url }}" type="image/svg+xml">
+{%- endif %}
+{%- if page.alt_url %}
+<!-- 告訴搜尋引擎同一頁的各語言版本；其他語言的使用者（x-default）看英文版 -->
+<link rel="alternate" hreflang="zh-Hant" href="{{ zh_url | absolute_url }}">
+<link rel="alternate" hreflang="en" href="{{ en_url | absolute_url }}">
+<link rel="alternate" hreflang="x-default" href="{{ en_url | absolute_url }}">
+{%- endif %}
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="{{ prefix | append: '/' | relative_url }}">{{ site.title }}</a>
+    {%- if page.alt_url %}
+    <!-- 分段控制：兩格都是連結，點哪一格就到那個語言；目前的語言有滑塊 -->
+    <nav class="lang" aria-label="{% if is_en %}Language{% else %}語言{% endif %}">
+      <a href="{{ zh_url | relative_url }}" lang="zh-Hant"{% unless is_en %} class="current" aria-current="page"{% endunless %}>中文</a>
+      <a href="{{ en_url | relative_url }}" lang="en"{% if is_en %} class="current" aria-current="page"{% endif %}>English</a>
+    </nav>
+    {%- endif %}
+  </div>
+</header>
+
+<main>
+  {%- if page.title %}
+  <div class="page-head">
+    {%- if page.icon %}
+    <img class="app-icon" src="{{ page.icon | relative_url }}" alt="" aria-hidden="true">
+    {%- endif %}
+    <div>
+      {%- if page.app %}<p class="eyebrow">{{ page.app }}</p>{% endif %}
+      <h1>{{ page.title }}</h1>
+      {%- if page.updated %}
+      <p class="updated">
+        {%- if is_en -%}
+        Last updated: {{ page.updated | date: "%B %-d, %Y" }}
+        {%- else -%}
+        最後更新：{{ page.updated | date: "%Y 年 %-m 月 %-d 日" }}
+        {%- endif -%}
+      </p>
+      {%- endif %}
+    </div>
+  </div>
+  {%- endif %}
+
+  {%- if current_app %}
+  <!-- 分頁標籤：同一個 App 的各頁（資料來源 _data/apps.yml） -->
+  {%- capture app_url %}{{ prefix }}/{{ current_app.id }}/{% endcapture %}
+  <nav class="app-tabs" aria-label="{{ current_app.name[lang] }}">
+    {%- for p in current_app.pages %}
+    {%- assign tab_url = app_url | append: p.path %}
+    <a href="{{ tab_url | relative_url }}"{% if tab_url == page.url %} class="current" aria-current="page"{% endif %}>{{ p.title[lang] }}</a>
+    {%- endfor %}
+  </nav>
+  {%- endif %}
+
+  {{ content }}
+</main>
+
+<footer class="site-footer">
+  <span>© {{ site.time | date: "%Y" }} {{ site.title }}</span>
+  <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+</footer>
+
+</body>
+</html>

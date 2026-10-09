@@ -1,0 +1,39 @@
+{%- comment -%}
+  首頁的 App 列表：依系列分組，每個 App 一張卡片
+    上半部 → App 的主頁（支援頁）
+    下半部 → App 的每一頁
+  資料來源：_data/series.yml、_data/apps.yml
+{%- endcomment -%}
+{%- if page.lang == "en" -%}
+  {%- assign lang = "en" -%}
+  {%- assign prefix = "/en" -%}
+{%- else -%}
+  {%- assign lang = "zh-Hant" -%}
+  {%- assign prefix = "" -%}
+{%- endif -%}
+{%- for series in site.data.series %}
+{%- assign apps = site.data.apps | where: "series", series.id %}
+{%- if apps.size > 0 %}
+<section class="series">
+  <h2 class="series-title">{{ series.title[lang] }}</h2>
+  {%- for app in apps %}
+  {%- capture app_url %}{{ prefix }}/{{ app.id }}/{% endcapture %}
+  <div class="app-card">
+    <a class="main" href="{{ app_url | relative_url }}">
+      <img class="app-icon" src="{{ app.icon | relative_url }}" alt="" aria-hidden="true">
+      <span class="info">
+        <span class="name">{{ app.name[lang] }}</span>
+        <span class="desc">{{ app.desc[lang] }}</span>
+      </span>
+      <span class="chevron" aria-hidden="true">›</span>
+    </a>
+    <nav class="links" aria-label="{{ app.name[lang] }}">
+      {%- for p in app.pages %}
+      <a href="{{ app_url | append: p.path | relative_url }}">{{ p.title[lang] }}</a>
+      {%- endfor %}
+    </nav>
+  </div>
+  {%- endfor %}
+</section>
+{%- endif %}
+{%- endfor %}

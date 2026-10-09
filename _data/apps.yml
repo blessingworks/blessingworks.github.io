@@ -1,0 +1,27 @@
+# 旗下的 App 與各自的頁面
+#
+# 首頁的 App 卡片、App 頁面標題下方的分頁標籤，都從這裡產生。
+# 新增 App 或新增頁面時只改這裡（頁面檔案本身另外建立）。
+#
+#   id:      網址的資料夾名稱（/aquatrace/）
+#   series:  所屬系列，對應 _data/series.yml
+#   pages:   path 是相對於 App 資料夾的路徑；"" = App 的主頁（支援頁）
+
+- id: aquatrace
+  series: xiaoji
+  icon: /assets/aquatrace/app-icon.svg
+  name:
+    zh-Hant: 補水小記
+    en: AquaTrace
+  desc:
+    zh-Hant: 記錄每天喝了什麼、喝了多少
+    en: Track what and how much you drink each day
+  pages:
+    - path: ""
+      title:
+        zh-Hant: 支援
+        en: Support
+    - path: privacy/
+      title:
+        zh-Hant: 隱私權政策
+        en: Privacy Policy

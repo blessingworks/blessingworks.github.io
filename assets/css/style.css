@@ -1,0 +1,163 @@
+/* ============================================================
+   Blessing Works 網站樣式（配色對齊 App）
+     頁面底色 = L1（淺色 F2F2F7 / 深色 000）
+     卡片底色 = L2（淺色 FFF / 深色 1C1C1E）
+     強調色   = 天色 2CA9E1
+   ============================================================ */
+
+:root {
+  --bg: #F2F2F7;
+  --card: #FFFFFF;
+  --text: #000000;
+  --text-2: rgba(60, 60, 67, 0.6);
+  --separator: rgba(60, 60, 67, 0.18);
+  --track: rgba(118, 118, 128, 0.12);
+  --accent: #2CA9E1;
+  --radius: 16px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #000000;
+    --card: #1C1C1E;
+    --text: #FFFFFF;
+    --text-2: rgba(235, 235, 245, 0.6);
+    --separator: rgba(84, 84, 88, 0.6);
+    --track: rgba(118, 118, 128, 0.24);
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang TC", "Noto Sans TC", "Helvetica Neue", sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* 頁首：品牌（左）＋語言切換（右），捲動時固定、半透明 */
+.site-header {
+  position: sticky; top: 0; z-index: 10;
+  background: color-mix(in srgb, var(--bg) 82%, transparent);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 0.5px solid var(--separator);
+}
+.site-header .inner {
+  max-width: 720px; margin: 0 auto; padding: 12px 20px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.brand { font-weight: 600; color: var(--text); letter-spacing: 0.01em; }
+.brand:hover { text-decoration: none; }
+
+/* 語言切換：iOS 分段控制。兩格等寬，目前的語言有滑塊（卡片色＋陰影） */
+.lang {
+  display: inline-grid; grid-template-columns: 1fr 1fr;
+  padding: 2px; border-radius: 9px; background: var(--track);
+  font-size: 14px; line-height: 1;
+}
+.lang a {
+  display: block; min-width: 72px; padding: 7px 12px;
+  border-radius: 7px; text-align: center;
+  color: var(--text); font-weight: 500;
+}
+.lang a:hover { text-decoration: none; background: var(--separator); }
+.lang a.current {
+  background: var(--card); font-weight: 600; cursor: default;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 0 0 0.5px rgba(0, 0, 0, 0.04);
+}
+
+main { max-width: 720px; margin: 0 auto; padding: 32px 20px 48px; }
+
+/* 頁面標題區：App 圖示＋App 名稱＋頁名＋更新日期 */
+.page-head { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
+/* 圓角同 App 內的 AppIconImage（22.37%）；淺色底在淺色模式下用細框分出邊界 */
+.app-icon {
+  width: 64px; height: 64px; border-radius: 22.37%; flex: none;
+  box-shadow: 0 0 0 0.5px var(--separator), 0 1px 3px rgba(0, 0, 0, 0.10);
+}
+.eyebrow { font-size: 15px; color: var(--text-2); margin: 0; }
+h1 { font-size: 30px; line-height: 1.25; margin: 2px 0 4px; letter-spacing: -0.01em; }
+.updated { font-size: 14px; color: var(--text-2); margin: 0; }
+
+/* App 頁面的分頁標籤（標題區下方）：目前的頁面粗體＋天色底線 */
+.app-tabs {
+  display: flex; flex-wrap: wrap; gap: 0 24px; margin: -12px 0 28px;
+  border-bottom: 0.5px solid var(--separator);
+  font-size: 15px;
+}
+.app-tabs a {
+  padding: 8px 0 10px; margin-bottom: -0.5px;
+  color: var(--text-2); border-bottom: 2px solid transparent;
+}
+.app-tabs a:hover { text-decoration: none; color: var(--text); }
+.app-tabs a.current { color: var(--text); font-weight: 600; border-bottom-color: var(--accent); }
+
+/* 重點摘要：Markdown 的引言 → 卡片（和 App 相同） */
+blockquote {
+  margin: 0 0 32px; padding: 18px 20px 18px 22px;
+  background: var(--card); border-radius: var(--radius);
+  border-left: 4px solid var(--accent);
+}
+blockquote ul { margin: 0; padding-left: 1.1em; }
+blockquote li + li { margin-top: 8px; }
+blockquote p:last-child { margin-bottom: 0; }
+
+/* 內文 */
+h2 {
+  font-size: 20px; line-height: 1.35; margin: 36px 0 10px;
+  padding-top: 20px; border-top: 0.5px solid var(--separator);
+}
+main > h2:first-of-type { border-top: none; padding-top: 0; }
+h3 { font-size: 17px; margin: 20px 0 6px; }
+p { margin: 0 0 12px; }
+ul, ol { padding-left: 1.3em; margin: 0 0 12px; }
+li + li { margin-top: 6px; }
+strong { font-weight: 600; }
+
+/* 首頁開頭 */
+.hero { margin: 8px 0 32px; }
+.hero h1 { font-size: 34px; margin: 0 0 6px; }
+.hero p { color: var(--text-2); margin: 0; }
+
+/* 首頁：系列分組（標題寫法同 App 設定頁的小節標題：次要色、粗體） */
+.series { margin-bottom: 28px; }
+.series-title {
+  font-size: 15px; font-weight: 600; color: var(--text-2);
+  margin: 0 0 8px 4px; padding: 0; border: none; letter-spacing: 0.02em;
+}
+
+/* 首頁：App 卡片。上半部 → App 主頁（支援），下半部 → 各頁 */
+.app-card { background: var(--card); border-radius: var(--radius); overflow: hidden; }
+.app-card + .app-card { margin-top: 12px; }
+.app-card .main {
+  display: flex; align-items: center; gap: 16px; padding: 16px;
+  color: var(--text);
+}
+.app-card .main:hover { text-decoration: none; background: var(--track); }
+.app-card .app-icon { width: 60px; height: 60px; }
+.app-card .info { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.app-card .name { font-weight: 600; font-size: 18px; }
+.app-card .desc { font-size: 15px; color: var(--text-2); line-height: 1.5; }
+.app-card .chevron { color: var(--text-2); font-size: 22px; line-height: 1; }
+.app-card .links {
+  display: flex; flex-wrap: wrap; gap: 4px 20px;
+  padding: 11px 16px 12px 92px;          /* 對齊名稱的左緣（內距 16 + 圖示 60 + 間距 16） */
+  border-top: 0.5px solid var(--separator);
+  font-size: 15px;
+}
+
+/* 頁尾 */
+.site-footer {
+  max-width: 720px; margin: 0 auto; padding: 24px 20px 48px;
+  border-top: 0.5px solid var(--separator);
+  font-size: 14px; color: var(--text-2);
+  display: flex; flex-wrap: wrap; gap: 6px 20px; justify-content: space-between;
+}

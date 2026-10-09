@@ -1,0 +1,29 @@
+# Blessing Works 網站（GitHub Pages 內建 Jekyll）
+#
+# 網址結構：資料夾路徑 = 網址路徑；中文（主要語言）在根目錄，英文在 /en/
+#   /                         工作室首頁
+#   /aquatrace/               補水小記：支援（App Store Connect 的「支援網址」）
+#   /aquatrace/privacy/       補水小記：隱私權政策（App Store Connect 的「隱私權政策網址」）
+#   /en/...                   英文版（同樣的結構）
+#
+# 每一頁的開頭（front matter）：
+#   lang:     zh-Hant / en
+#   alt_url:  另一個語言的同一頁（語言切換與 hreflang 用）
+#   app:      App 名稱（有的話頁首顯示 App 圖示與名稱）
+#   icon:     App 圖示路徑
+#   updated:  最後更新日期（政策頁）
+
+title: Blessing Works
+email: blessingworks.studio@gmail.com
+url: https://blessingworks.github.io
+markdown: kramdown
+
+# _preview（設計稿）以底線開頭，Jekyll 本來就不會發布；README 另外排除
+exclude:
+  - README.md
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
