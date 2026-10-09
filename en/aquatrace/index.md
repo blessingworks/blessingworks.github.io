@@ -30,7 +30,7 @@ In Apple Health, tap your profile picture in the top-right corner, go to Apps un
 
 ### How do I delete my data?
 
-See [Retention and Deletion](privacy/#5-retention-and-deletion) in the Privacy Policy.
+See [Retention and Deletion](privacy/#4-retention-and-deletion) in the Privacy Policy.
 
 ### Can I use the numbers in the App as medical advice?
 
