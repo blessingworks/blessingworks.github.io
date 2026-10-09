@@ -12,7 +12,7 @@ AquaTrace helps you keep track of what and how much you drink each day, with sta
 
 If you have any questions or suggestions, please email us: [blessingworks.studio@gmail.com](mailto:blessingworks.studio@gmail.com)
 
-Including your iPhone model and iOS version helps us find the problem faster.
+Emails sent from the App's Settings automatically include the App version, iOS version, and device model. If you write from elsewhere, including your iPhone model and iOS version helps us find the problem faster.
 
 ## FAQ
 

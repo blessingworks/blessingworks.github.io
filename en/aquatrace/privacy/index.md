@@ -56,7 +56,7 @@ Your App data is entirely under your control: you can view, edit, and delete rec
 
 ## 6. Information You Provide When Contacting Us
 
-If you email us, we receive your email address and the content of your message. We use them only to reply to you, never for any other purpose, and never share them with third parties. You can ask us to delete this correspondence at any time.
+If you email us, we receive your email address and the content of your message. When you write to us from the App's Settings, the message is pre-filled with the App version, iOS version, and device model to help us understand the issue; you can edit or remove them before sending. We use them only to reply to you, never for any other purpose, and never share them with third parties. You can ask us to delete this correspondence at any time.
 
 ## 7. Crash Information Provided by Apple
 

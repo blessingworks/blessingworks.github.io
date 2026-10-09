@@ -12,7 +12,7 @@ alt_url: /en/aquatrace/
 
 使用上有任何問題或建議，歡迎來信：[blessingworks.studio@gmail.com](mailto:blessingworks.studio@gmail.com)
 
-來信時附上 iPhone 機型與 iOS 版本，可以幫助我們更快找到問題。
+從 App 的設定頁寫信，會自動附上 App 版本、iOS 版本與裝置型號；從其他地方寫信時，附上 iPhone 機型與 iOS 版本，可以幫助我們更快找到問題。
 
 ## 常見問題
 
