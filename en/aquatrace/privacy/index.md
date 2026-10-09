@@ -68,7 +68,7 @@ When you open this policy or the support page from the App, it loads a website h
 
 ## 9. Children
 
-The App doesn't collect children's data. Users under 18 should see "When to Talk to Your Doctor First" in the Disclaimer.
+The App doesn't collect personal data from any user, including children (for example, under 13 as defined by U.S. law, or under 13 to 16 depending on the country in the EU). If you're a parent or guardian and find that your child has emailed us, you can contact us and we'll delete that correspondence.
 
 ## 10. Changes to This Policy
 
