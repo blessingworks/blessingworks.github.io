@@ -27,7 +27,7 @@ The App doesn't send the data you enter in it to the developer or to any third p
 
 What you enter in the App (drink records, beverages, hydration goals, and settings) is stored in the following places:
 
-- **Your device**: All data is stored on this device and protected by iOS data protection.
+- **Your device**: All data is stored on this device and protected by the operating system's data protection.
 - **Your iCloud**: If your device is signed in to iCloud, your data syncs to your other devices through Apple's iCloud and is restored when you reinstall the App. It's stored in the private area of your own iCloud account, which the developer can't access. iCloud servers are operated by Apple and may be located outside your country or region; your data is protected under [Apple's Privacy Policy](https://www.apple.com/legal/privacy/).
 - **Apple Health (with your permission)**: If you allow it, the App writes water intake, caffeine, and nutrients to Apple Health. The App only writes and never reads. Once written, the data is managed by Apple Health and may be read by other apps you authorize.
 
@@ -36,7 +36,7 @@ What you enter in the App (drink records, beverages, hydration goals, and settin
 - **Apple Health**: Used only to write your drink records. The App works normally if you don't allow it.
 - **Notifications**: Used to remind you to drink water. Notifications are scheduled on your device and never pass through any server.
 
-You can change these permissions at any time in iOS Settings.
+You can change these permissions at any time in your device's Settings.
 
 ## 4. Retention and Deletion
 
@@ -44,9 +44,9 @@ The App keeps your data until you delete it.
 
 - **Delete a single record**: Delete it in the App, and it's also deleted from your synced devices and iCloud. The matching entry the App wrote to Apple Health is usually deleted too; if it isn't, you can delete it manually in Apple Health.
 - **Delete data on this device**: Deleting the App removes its data from this device, but not from iCloud or Apple Health.
-- **Delete data in iCloud**: In iOS Settings → your name → iCloud → Storage, find the App and delete its data.
-- **Stop syncing**: In iOS Settings → your name → iCloud, tap See All under Saved to iCloud and turn off the App.
-- **Delete data in Apple Health**: Delete it in Apple Health. To stop writing, turn off the App's access in Apple Health or iOS Settings.
+- **Delete data in iCloud**: In your device's Settings → your name → iCloud → Storage, find the App and delete its data.
+- **Stop syncing**: In your device's Settings → your name → iCloud, tap See All under Saved to iCloud and turn off the App.
+- **Delete data in Apple Health**: Delete it in Apple Health. To stop writing, turn off the App's access in Apple Health or your device's Settings.
 
 ## 5. Your Rights
 
@@ -56,11 +56,11 @@ Your App data is entirely under your control: you can view, edit, and delete rec
 
 ## 6. Information You Provide When Contacting Us
 
-If you email us, we receive your email address and the content of your message. When you write to us from the App's Settings, the message is pre-filled with the App version, iOS version, and device model to help us understand the issue; you can edit or remove them before sending. We use them only to reply to you, never for any other purpose, and never share them with third parties. You can ask us to delete this correspondence at any time.
+If you email us, we receive your email address and the content of your message. When you write to us from the App's Settings, the message is pre-filled with the App version, OS version, and device model to help us understand the issue; you can edit or remove them before sending. We use them only to reply to you, never for any other purpose, and never share them with third parties. You can ask us to delete this correspondence at any time.
 
 ## 7. Crash Information Provided by Apple
 
-If you choose to share analytics with app developers in iOS, Apple may provide the developer with anonymous crash reports to help fix bugs. This feature is managed by Apple, and you can turn it off in iOS Settings → Privacy & Security → Analytics & Improvements.
+If you choose to share analytics with app developers in your device's Settings, Apple may provide the developer with anonymous crash reports to help fix bugs. This feature is managed by Apple, and you can turn it off in your device's Settings → Privacy & Security → Analytics & Improvements.
 
 ## 8. This Policy and the Support Page
 

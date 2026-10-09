@@ -12,17 +12,17 @@ AquaTrace helps you keep track of what and how much you drink each day, with sta
 
 If you have any questions or suggestions, please email us: [blessingworks.studio@gmail.com](mailto:blessingworks.studio@gmail.com)
 
-Emails sent from the App's Settings automatically include the App version, iOS version, and device model. If you write from elsewhere, including your iPhone model and iOS version helps us find the problem faster.
+Emails sent from the App's Settings automatically include the App version, OS version, and device model. If you write from elsewhere, including your device model and OS version helps us find the problem faster.
 
 ## FAQ
 
-### Will I lose my data when I switch to a new iPhone?
+### Will I lose my data when I switch to a new device?
 
-No. As long as your new iPhone is signed in to the same iCloud account, your data syncs back automatically after you install AquaTrace.
+No. As long as your new device is signed in to the same iCloud account, your data syncs back automatically after you install AquaTrace.
 
 ### I'm not getting reminders to drink water.
 
-Make sure notifications are allowed in iOS Settings → Notifications → AquaTrace, then check the reminder schedule in the App's settings.
+Make sure notifications are allowed in your device's Settings → Notifications → AquaTrace, then check the reminder schedule in the App's settings.
 
 ### My records don't appear in Apple Health.
 
