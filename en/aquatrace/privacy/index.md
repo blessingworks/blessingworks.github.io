@@ -5,7 +5,7 @@ icon: /assets/aquatrace/app-icon.svg
 lang: en
 alt_url: /aquatrace/privacy/
 version: 1.0
-updated: 2026-10-09
+updated: 2026-11-13
 ---
 
 This policy explains how AquaTrace (the "App") handles your data.
@@ -25,7 +25,7 @@ The App doesn't send the data you enter in it to the developer or to any third p
 
 ## 2. Where Your Data Is Stored
 
-What you enter in the App (drink records, beverages, hydration goals, and settings) is stored in the following places:
+What you enter in the App (records, drinks, hydration goals, and settings) is stored in the following places:
 
 - **Your device**: All data is stored on this device and protected by the operating system's data protection.
 - **Your iCloud**: If your device is signed in to iCloud, your data syncs to your other devices through Apple's iCloud and is restored when you reinstall the App. It's stored in the private area of your own iCloud account, which the developer can't access. iCloud servers are operated by Apple and may be located outside your country or region; your data is protected under [Apple's Privacy Policy](https://www.apple.com/legal/privacy/).
@@ -44,8 +44,8 @@ The App keeps your data until you delete it.
 
 - **Delete a single record**: Delete it in the App, and it's also deleted from your synced devices and iCloud. The matching entry the App wrote to Apple Health is usually deleted too; if it isn't, you can delete it manually in Apple Health.
 - **Delete data on this device**: Deleting the App removes its data from this device, but not from iCloud or Apple Health.
-- **Delete data in iCloud**: In your device's Settings → your name → iCloud → Storage, find the App and delete its data.
-- **Stop syncing**: In your device's Settings → your name → iCloud, tap See All under Saved to iCloud and turn off the App.
+- **Delete data in iCloud**: In your device's Settings > your name > iCloud > Storage, find the App and delete its data.
+- **Stop syncing**: In your device's Settings > your name > iCloud, tap See All under Saved to iCloud and turn off the App.
 - **Delete data in Apple Health**: Delete it in Apple Health. To stop writing, turn off the App's access in Apple Health or your device's Settings.
 
 ## 5. Your Rights
@@ -60,7 +60,7 @@ If you email us, we receive your email address and the content of your message. 
 
 ## 7. Crash Information Provided by Apple
 
-If you choose to share analytics with app developers in your device's Settings, Apple may provide the developer with anonymous crash reports to help fix bugs. This feature is managed by Apple, and you can turn it off in your device's Settings → Privacy & Security → Analytics & Improvements.
+If you choose to share analytics with app developers in your device's Settings, Apple may provide the developer with anonymous crash reports to help fix bugs. This feature is managed by Apple, and you can turn it off in your device's Settings > Privacy & Security > Analytics & Improvements.
 
 ## 8. This Policy and the Support Page
 
@@ -80,4 +80,4 @@ If you have any questions about this policy, please contact: [blessingworks.stud
 
 ## Revision History
 
-- **1.0 (2026-10-09)**: Initial version.
+- **1.0 (2026-11-13)**: Initial version.

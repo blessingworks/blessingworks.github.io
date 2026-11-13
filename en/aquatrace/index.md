@@ -22,7 +22,7 @@ No. As long as your new device is signed in to the same iCloud account, your dat
 
 ### I'm not getting reminders to drink water.
 
-Make sure notifications are allowed in your device's Settings → Notifications → AquaTrace, then check the reminder schedule in the App's settings.
+Make sure notifications are allowed in your device's Settings > Notifications > AquaTrace, then check the reminder schedule in the App's settings.
 
 ### My records don't appear in Apple Health.
 
